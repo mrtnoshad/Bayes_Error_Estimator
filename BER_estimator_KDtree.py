@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TKAgg')
 import numpy as np
 import math
 import cvxpy as cvx # Need to install CVXPY package 
@@ -9,7 +11,7 @@ from sklearn import neighbors
 from sklearn.datasets import make_classification
 from get_weights import get_Chebyshev_weights, get_arithmetic_weights , get_uniform_weights
 from sklearn.model_selection import GridSearchCV
-from sklearn.neighbors.kde import KernelDensity
+from sklearn.neighbors import KernelDensity
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
