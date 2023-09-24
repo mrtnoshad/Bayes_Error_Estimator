@@ -83,7 +83,7 @@ def bg_estimator(X,Y,h, N_est_all = 5000, U = 0.005):
 	N=X.shape[0]
 	
 	m=max(Y)+1
-	m=int(np.asscalar(m))
+	m=int(np.ndarray.item(m))
 	N_est_all = np.min([N_est_all, N])
 	N_est = int(N_est_all/m)
 	#N_per_class = np.array([len(Y[(Y==i)]) for i in range(m)])
